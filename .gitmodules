@@ -6,3 +6,19 @@
 	path = OTools/l10n_ar
 	url = git@bitbucket.org:otools/l10n_ar
 	branch = master
+[submodule "OTools/account-financial-tools"]
+	path = OTools/account-financial-tools
+	url = git@bitbucket.org:otools/account-financial-tools
+	branch = master
+[submodule "OTools/partner-contact"]
+	path = OTools/partner-contact
+	url = git@bitbucket.org:otools/partner-contact
+	branch = master
+[submodule "OTools/account-payment"]
+	path = OTools/account-payment
+	url = git@bitbucket.org:otools/account-payment
+	branch = master
+[submodule "OTools/miscellaneous"]
+	path = OTools/miscellaneous
+	url = git@bitbucket.org:otools/miscellaneous
+	branch = master

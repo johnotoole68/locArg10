@@ -2,3 +2,7 @@
 	path = OCA/l10n-argentina
 	url = git@github.com:OCA/l10n-argentina.git
 	branch = 10.0
+[submodule "OTools/l10n_ar"]
+	path = OTools/l10n_ar
+	url = git@bitbucket.org:otools/l10n_ar
+	branch = master

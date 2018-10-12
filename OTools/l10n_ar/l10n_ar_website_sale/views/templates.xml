@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<!--
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Shop">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/website_sale/static/src/css/website_sale.css" />
+            <link rel="stylesheet" href="/website_sale/static/src/css/website_mail.css" />
+            <script type="text/javascript" src="/website_sale/static/src/js/website_sale.js"></script>
+            <script type="text/javascript" src="/website_sale/static/src/js/website_sale_payment.js"></script>
+            <script type="text/javascript" src="/website_sale/static/src/js/website_sale_validate.js"></script>
+            <script type="text/javascript" src="/website_sale/static/src/js/website_sale_tour_buy.js"></script>
+            <script type="text/javascript" src="/website_sale/static/src/js/website_sale_rating.js"></script>
+            <script type="text/javascript" src="/website_sale/static/src/js/website_sale_tracking.js"></script>
+        </xpath>
+    </template>
+  -->
+
+
+    <template id="address" name="Address Management" inherit_id="website_sale.address">
+      <xpath expr="//div[@id='div_email']" position="before">
+        <div t-attf-class="form-group #{error.get('main_id_category_id') and 'has-error' or ''} col-md-2" id="div_main_id_category">
+          <label class="control-label" for="main_id_category_id">DNI/CUIT</label>
+          <select id="main_id_category_id" name="main_id_category_id" class="form-control">
+              <option value="">DNI/CUIT...</option>
+              <t t-foreach="id_categories" t-as="idc">
+                  <option t-att-value="idc.id" t-att-selected="idc.id == (id_category and id_category.id or -1)">
+                      <t t-esc="idc.display_name" />
+                  </option>
+              </t>
+          </select>
+        </div>
+        <div t-attf-class="form-group #{error.get('main_id_number') and 'has-error' or ''} col-md-4" id="div_main_id_number">
+          <label class="control-label" for="main_id_number">N°</label>
+          <input type="text" name="main_id_number" class="form-control" t-att-value="'main_id_number' in checkout and checkout['main_id_number']" />
+        </div>
+      </xpath>
+    </template>
+</odoo>

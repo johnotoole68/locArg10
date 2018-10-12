@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_product_product">
+            <field name="name">product.product.fe.account</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+		<field name="barcode" position="after">
+			<field name="codigo_ncm" />
+		</field>
+	    </field>
+    </record>
+
+    </data>
+</openerp>

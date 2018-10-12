@@ -50,7 +50,12 @@
         #'report_aeroo',
     ],
     'external_dependencies': {
-        #'python': ['pyafipws'],
+        'python': [
+            'client',
+            'pysimplesoap',
+            #'pyafipws',
+            #'pyafipws'
+        ],
     },
     'installable': True,
     'name': 'Automatic Argentinian Withholdings on Payments',

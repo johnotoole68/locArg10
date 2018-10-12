@@ -53,7 +53,7 @@
         'python': [
             'client',
             'pysimplesoap',
-            #'pyafipws',
+            'pyafipws'
             #'pyafipws'
         ],
     },

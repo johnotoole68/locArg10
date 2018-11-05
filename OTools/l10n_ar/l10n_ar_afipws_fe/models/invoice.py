@@ -418,6 +418,28 @@ print "Observaciones:", wscdc.Obs
             moneda_ctz = inv.currency_rate
 
             # create the invoice internally in the helper
+            fields = {
+                "concepto": concepto,
+                "tipo_doc": tipo_doc,
+                "nro_doc": nro_doc,
+                "doc_afip_code": doc_afip_code,
+                "pos_number": pos_number,
+                "cbt_desde": cbt_desde,
+                "cbt_hasta": cbt_hasta,
+                "imp_total": imp_total,
+                "imp_tot_conc": imp_tot_conc,
+                "imp_neto": imp_neto,
+                "imp_iva": imp_iva,
+                "imp_trib": imp_trib,
+                "imp_op_ex": imp_op_ex,
+                "fecha_cbte": fecha_cbte,
+                "fecha_venc_pago": fecha_venc_pago,
+                "fecha_serv_desde": fecha_serv_desde,
+                "fecha_serv_hasta": fecha_serv_hasta,
+                "moneda_id": moneda_id,
+                "moneda_ctz": moneda_ctz
+            }
+            _logger.info(fields)
             if afip_ws == 'wsfe':
                 ws.CrearFactura(
                     concepto, tipo_doc, nro_doc, doc_afip_code, pos_number,

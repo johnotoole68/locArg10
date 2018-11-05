@@ -409,7 +409,9 @@ print "Observaciones:", wscdc.Obs
                 imp_neto = str("%.2f" % abs(inv.amount_untaxed))
             else:
                 imp_neto = str("%.2f" % abs(inv.amount_untaxed))
-            imp_iva = str("%.2f" % abs(inv.vat_amount))
+            #    imp_neto = str("%.2f" % abs(inv.vat_taxable_amount))
+            #imp_iva = str("%.2f" % abs(inv.vat_amount))
+            imp_iva = str("%.2f" % abs(inv.other_taxes_amount))
             # se usaba para wsca..
             # imp_subtotal = str("%.2f" % abs(inv.amount_untaxed))
             imp_trib = str("%.2f" % abs(inv.other_taxes_amount))

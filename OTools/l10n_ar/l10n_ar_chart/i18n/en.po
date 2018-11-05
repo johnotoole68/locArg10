@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * l10n_ar_chart_generic
-# 
+#
 # Translators:
 msgid ""
 msgstr ""

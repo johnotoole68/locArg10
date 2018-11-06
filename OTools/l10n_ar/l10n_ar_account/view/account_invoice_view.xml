@@ -5,9 +5,9 @@
       <function model="ir.model.fields" name="formbuilder_whitelist">
           <value>account.invoice</value>
           <value eval="[
-              'invoice_number',
               'main_id_number',
-              'document_number'
+              'document_number',
+              'move_name'
           ]"/>
       </function>
 
@@ -45,6 +45,7 @@
                     <!-- if poitn of sale = false then not argentina journal -->
                     <field name="main_id_number" invisible="0"/>
                     <field name="document_number" invisible="0"/>
+                    <field name="move_name" invisible="0"/>
 
                     <field name="afip_incoterm_id" attrs="{'invisible': [('document_letter_name', '!=', 'E')]}"/>
                     <!-- <field name="afip_incoterm_id" attrs="{'invisible': [('point_of_sale_type', '=', False)]}"/> -->

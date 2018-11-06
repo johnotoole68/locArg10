@@ -16,7 +16,7 @@ class AccountInvoice(models.Model):
 
     main_id_number = fields.Char(
         related='commercial_partner_id.main_id_number',
-        readonly=True,
+        readonly=False,
     )
     state_id = fields.Many2one(
         related='commercial_partner_id.state_id',
